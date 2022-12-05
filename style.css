@@ -1,0 +1,85 @@
+:root {
+    --celeste: #2DC4F0;
+}
+
+body {
+    background-color: var(--celeste);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 1rem;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nuevojuego {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    flex-direction: column;    
+    text-align: center;
+    align-items: space-around;
+}
+
+.nuevojuego__logo {
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    margin: auto;
+    padding: 2rem;
+}
+
+.nuevojuego__boton {
+    background-image: linear-gradient(white, grey);
+    border-radius: 5px;
+    padding: .7rem;
+    margin: auto;
+    box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.5);
+    transition: .2s 
+  }
+
+  .nuevojuego__boton:hover {
+    background: white;
+    transform: scale(1.2);
+  }
+  
+  .nuevojuego__boton:active {
+    color: #2DC4F0;
+  }
+
+.tablero {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: space-around;
+}
+
+.tablero__juego {
+    display: grid;
+    width: 250px;
+    height: 250px;
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows: repeat(4,25%);
+    margin: auto;
+}
+
+.tablero__juego__casilla {
+    background-image: linear-gradient(white, rgba(128, 128, 128, 0.654));
+    border: solid 0.5px rgba(0, 0, 0, 0.51);
+}
+
+.tablero__puntaje {
+    text-align: center;
+}
+
+
+
