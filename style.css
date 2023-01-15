@@ -85,6 +85,20 @@ header {
 .tablero__juego__box--mostrar {
     background-color: white;
     color: blue;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+}
+
+.tablero__juego__box--bomba{
+    background-image: url(img/mina.png);
+    width: 100%;
+    background-size: contain;
+    background-repeat: none;
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
 }
 
 .tablero__puntaje {

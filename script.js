@@ -1,10 +1,10 @@
 let tableroHTML = document.getElementById("tablero__juego");
-
 let botonJugar = document.getElementById("nuevojuego__boton");
-
 let boxs = document.querySelectorAll(".tablero__juego__box");
-
 let botonJugarDeNuevo = document.getElementById("botonNuevoJuego");
+let puntaje = document.querySelector(".tablero__puntaje");
+let puntajeFinal = document.getElementById("puntaje.p");
+let puntos;
 
 //Dimensiones del tablero
 let x = 4; //j
@@ -176,14 +176,16 @@ function borrarTablero() {
   do {
     tablero.shift();
     contar++;
-  } while (contar < elementos);
+  } while (contar <= elementos);
 }
 
 function gameOver() {
   window.location.href = "fin-partida.html";
+  puntajeFinal.textContent = "Puntaje: " + puntos;
 }
 
 const crearJuego = function(e) {
+  puntos = 0;
   borrarTablero();
   llenarTablero(bombas);
   cargarNumeroBombas();
@@ -196,22 +198,26 @@ const mostrarBox = function(e) {
   let j = parseInt(idbox[2]);
 
   if(tablero[i][j] === "X") {
-    this.style.background = "red";
+    this.classList.toggle("tablero__juego__box--bomba");
     gameOver()
-    //this.style.backgroundImage = "url(img/mina.png)";
   } else {
-    //this.style.background = "white";
     this.textContent = tablero[i][j];
-    //this.style.color = "blue";
     this.classList.toggle("tablero__juego__box--mostrar");
+    puntos = puntos + 10;
+    puntaje.textContent = "Puntaje: " + puntos;
   }
 }
-
 
 boxs.forEach(box => {
   box.addEventListener("click", mostrarBox);
 })
 
 botonJugar.addEventListener('click', crearJuego);
+
+function redirect(){  
+  window.location.href= "index.html";
+}
+
+window.onload = crearJuego;
 
 
