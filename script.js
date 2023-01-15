@@ -163,12 +163,13 @@ function cargarNumeroBombas() {   //Asigna el número de bombas que rodean la ca
   }
 }
 
+/*
 function mostrarMatriz() { //BORRAR - SOLO CONTROL
   for (let i = 0; i < y; i++) {
     console.log(tablero[i]);
     i;
   }
-}
+}*/
 
 function borrarTablero() {
   let elementos = tablero.length;
@@ -193,7 +194,7 @@ const crearJuego = function(e) {
   borrarTablero();
   llenarTablero(bombas);
   cargarNumeroBombas();
-  mostrarMatriz(); //BORRAR
+ // mostrarMatriz(); //BORRAR
 };
 
 const mostrarBox = function(e) {
