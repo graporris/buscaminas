@@ -1,10 +1,40 @@
-<html>
+<!DOCTYPE html>
+<html> 
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Buscaminas</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  
   <body>
     <header>
       <h1>Buscaminas Ada School</h1>
     </header>
 
-    <img href="https://media.ada-school.org/5fcd3ac12b22eab4d301d819/5fcd49a07ffe7b324996b784/ada-logo-cfdb7c7b-1791-408f-b5b4-240b22bd1653.png" alt="Logo Ada School">
-    
+  
+    <div class="container">
+      <div class="nuevo-juego">
+        <img src="img/logo-Ada.jpeg" alt="Logo Ada School"           width="150"> <br>
+        <button id="botonNuevoJuego" onClick="redirect()"><strong>Nuevo Juego</strong></button>
+      </div>
+  
+      <div class="puntaje">
+        <p id="puntos">Puntaje: 200</p>
+        <img src="img/boom.jpg" alt="Imagen explosión"                 width="150">
+        <p>Perdiste!</p>
+      </div>
+    </div>
+
+
+    <div id="reglas">
+      <a href="reglas.html">¿Cómo jugar?</a>
+    </div>
+
+    <script>
+      function redirect(){  
+        window.location.href= "index.html";
+      }
+    </script>
   </body>
 </html>

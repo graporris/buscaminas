@@ -45,16 +45,16 @@ header {
     margin: auto;
     box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.5);
     transition: .2s 
-  }
+}
 
-  .nuevojuego__boton:hover {
+.nuevojuego__boton:hover {
     background: white;
     transform: scale(1.2);
-  }
+}
   
-  .nuevojuego__boton:active {
+.nuevojuego__boton:active {
     color: #2DC4F0;
-  }
+}
 
 .tablero {
     display: flex;
@@ -67,19 +67,100 @@ header {
     display: grid;
     width: 250px;
     height: 250px;
-    grid-template-columns: repeat(4,25%);
     grid-template-rows: repeat(4,25%);
+    grid-template-columns: repeat(4,25%); 
     margin: auto;
+    border: solid 0.5px rgba(0, 0, 0, 0.51);
 }
 
-.tablero__juego__casilla {
+.tablero__juego__box {
     background-image: linear-gradient(white, rgba(128, 128, 128, 0.654));
     border: solid 0.5px rgba(0, 0, 0, 0.51);
+}
+
+.tablero__juego__box:hover {
+    background-color:  white;
+}
+
+.tablero__juego__box--mostrar {
+    background-color: white;
+    color: blue;
 }
 
 .tablero__puntaje {
     text-align: center;
 }
 
+/*FIN PARTIDA - REGLAS*/ 
+
+h1 {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .container {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    
+  }
+  
+  .container div {
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  img {
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+  }
+
+  button {
+    background-image: linear-gradient(white, grey);
+    padding: 0.5em;
+    border-radius: 5px;
+    margin: 1em;
+    box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.5);
+    transition: .2s 
+  }
+  
+  button:hover {
+    background: white;
+    transform: scale(1.2);
+  }
+  
+  button:active {
+    color: #2DC4F0;
+  }
+  
+  .puntaje p {
+    margin: 2px;
+  }
+  
+  #puntos {
+    text-align: left;
+    margin: 0 20%;
+  }
+
+  #reglas {
+    padding-top: 2rem;
+  }
+
+#reglas a{
+    color:white;
+    text-decoration: none;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.323);
+    transition: .2s 
+}
+  
+#reglas a:hover {
+    text-decoration: underline;
+    transform: scale(1.2);
+}
+
+#reglas a:active {
+    color:rgba(128, 128, 128, 0.654)
+}
 
 

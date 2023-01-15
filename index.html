@@ -17,37 +17,33 @@
     <div class="container">
         <div class="nuevojuego">
             <img class="nuevojuego__logo" src="img/logo-Ada.jpeg" alt="Logo Ada School"></img>
-            <button class="nuevojuego__boton">Nuevo Juego</button>
+            <button class="nuevojuego__boton" id="nuevojuego__boton">Nuevo Juego</button>
         </div>
         <div class="tablero">
-            <p class="tablero__puntaje">Puntaje:</p>
-            <div class="tablero__juego">
-                <div class="tablero__juego__casilla"></div>
-                <div class="tablero__juego__casilla"></div>
-                <div class="tablero__juego__casilla"></div>
-                <div class="tablero__juego__casilla"></div>
-                <div class="tablero__juego__casilla"></div>
-                <div class="tablero__juego__casilla"></div>
-                <div class="tablero__juego__casilla"></div>
-                <div class="tablero__juego__casilla"></div>
-                <div class="tablero__juego__casilla"></div>
-                <div class="tablero__juego__casilla"></div>
-                <div class="tablero__juego__casilla"></div>
-                <div class="tablero__juego__casilla"></div>
-                <div class="tablero__juego__casilla"></div>
-                <div class="tablero__juego__casilla"></div>
-                <div class="tablero__juego__casilla"></div>
-                <div class="tablero__juego__casilla"></div>
+            <p class="tablero__puntaje" id="tablero__puntaje">Puntaje:</p>
+            <div class="tablero__juego" id="tablero__juego">
+                <div class="tablero__juego__box" id="0_0"></div>
+                <div class="tablero__juego__box" id="0_1"></div>
+                <div class="tablero__juego__box" id="0_2"></div>
+                <div class="tablero__juego__box" id="0_3"></div>
+                <div class="tablero__juego__box" id="1_0"></div>
+                <div class="tablero__juego__box" id="1_1"></div>
+                <div class="tablero__juego__box" id="1_2"></div>
+                <div class="tablero__juego__box" id="1_3"></div>
+                <div class="tablero__juego__box" id="2_0"></div>
+                <div class="tablero__juego__box" id="2_1"></div>
+                <div class="tablero__juego__box" id="2_2"></div>
+                <div class="tablero__juego__box" id="2_3"></div>
+                <div class="tablero__juego__box" id="3_0"></div>
+                <div class="tablero__juego__box" id="3_1"></div>
+                <div class="tablero__juego__box" id="3_2"></div>
+                <div class="tablero__juego__box" id="3_3"></div>
             </div>
         </div>
     </div>
-   
-    <form>
-        <label for="form__x">Coordenada x:</label><br>
-        <input type="text" name="form__x" id="form__x"><br>
-        <label for="form__y">Coordenada y:</label><br>
-        <input type="text" name="form__y" id="form__y">
-    </form>
+    <div id="reglas">
+        <a href="reglas.html">¿Cómo jugar?</a>
+    </div>
 <script src="script.js"></script>
 </body>
 </html>
