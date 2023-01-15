@@ -13,7 +13,7 @@ let bombas = 4;
 let tablero = new Array(y); //(y,x)
 
 
-function llenarTablero(bombas) {    //Crea la matriz y rellena con bombas y numeros
+function llenarTablero(bombas) {    //Crea la matriz y rellena con bombas
   let posicionx = new Array(bombas);
   let posiciony = new Array(bombas);
 
@@ -157,7 +157,7 @@ function cargarNumeroBombas() {   //Asigna el número de bombas que rodean la ca
   for (let i = 0; i < y; i++) {
     for (let j = 0; j < x; j++) {
       if (tablero[i][j] !== "X") {
-        tablero[i][j] = parseInt(bombasAdyacentes(j,i));
+        tablero[i][j] = bombasAdyacentes(i,j);
       }      
     } 
   }
@@ -177,6 +177,10 @@ function borrarTablero() {
     tablero.shift();
     contar++;
   } while (contar <= elementos);
+
+  boxs.forEach(box =>{
+    box.textContent = "";
+  })
 }
 
 function gameOver() {
